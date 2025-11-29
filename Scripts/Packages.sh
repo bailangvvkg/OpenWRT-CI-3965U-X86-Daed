@@ -144,12 +144,12 @@ mkdir -p Package/libcron && wget -O Package/libcron/Makefile https://raw.githubu
 
 git_sparse_clone main https://github.com/kenzok8/small-package daed-next luci-app-daed-next gost luci-app-gost luci-app-adguardhome
 
-git_sparse_clone main https://github.com/kiddin9/kwrt-packages natter2 luci-app-natter2 luci-app-cloudflarespeedtest luci-app-nginx luci-app-nfs luci-app-caddy openwrt-caddy
+git_sparse_clone main https://github.com/kiddin9/kwrt-packages natter2 luci-app-natter2 luci-app-cloudflarespeedtest luci-app-caddy openwrt-caddy luci-app-nginx-ha luci-app-nginx-manager luci-nginxer luci-app-nginx
 
 git clone --depth 1 --single-branch https://github.com/breeze303/openwrt-podman package/podman
 ./scripts/feeds install -a
 
-wget "https://alist4.lovelyy.eu.org/d/CloudFlareR2/immortalwrt/nginx/ngnx.conf?sign=FN_uiyymuja-Aj1z4I4Pevn3arIZXBdslq8Zjd_akdo=:0" -O ../feeds/packages/net/nginx-util/files/nginx.config
+wget "https://r2.lovelyy.eu.org/raw/immortalwrt/nginx/ngnx.conf" -O ../feeds/packages/net/nginx-util/files/nginx.config
 # echo 检测一下nginx的配置文件
 # cat ../feeds/packages/net/nginx-util/files/nginx.config
 
