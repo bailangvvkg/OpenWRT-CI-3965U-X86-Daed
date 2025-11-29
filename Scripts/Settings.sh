@@ -196,9 +196,9 @@ echo "CONFIG_PACKAGE_luci-app-daed=y" >> ./.config
 # 连上ssh不会断开并且显示文件管理
 echo "CONFIG_PACKAGE_opeh-sftp-server"=y
 # # docker只能集成
-# echo "CONFIG_PACKAGE_luci-app-dockerman=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-app-dockerman=y" >> ./.config
 # Podman
-echo "CONFIG_PACKAGE_luci-app-podman=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-app-podman=y" >> ./.config
 # qBittorrent
 # echo "CONFIG_PACKAGE_luci-app-qbittorrent=y" >> ./.config
 # 添加Homebox内网测速
