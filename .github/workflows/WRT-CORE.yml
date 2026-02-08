@@ -61,10 +61,10 @@ jobs:
     name: ${{inputs.WRT_SOURCE}}
     # runs-on: ubuntu-latest
     runs-on:
-      # ubuntu-latest
-      - self-hosted
-      - linux
-      - x64
+      ubuntu-latest
+      # - self-hosted
+      # - linux
+      # - x64
     steps:
       # - name: Checkout Projects
       #   uses: actions/checkout@main
