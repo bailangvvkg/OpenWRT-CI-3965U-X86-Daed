@@ -1,5 +1,5 @@
 #CI项目
-name: OWRT-X86
+name: OWRT-X86-LiBwrt/k6.18
 
 #CI计划
 on:
