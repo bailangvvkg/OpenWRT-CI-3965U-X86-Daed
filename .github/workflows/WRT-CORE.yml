@@ -118,12 +118,13 @@ jobs:
 
       - name: Install latest Clang/LLVM(安装最新的 LLVM/Clang)
         run: |
-          sudo apt-get update
-          sudo apt-get install -y lsb-release wget software-properties-common gnupg
-          wget -qO - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-          echo "deb http://apt.llvm.org/$(lsb_release -sc)/ llvm-toolchain-$(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/llvm.list
-          sudo apt-get update
-          sudo apt-get install -y clang llvm
+          # sudo apt-get update
+          # sudo apt-get install -y lsb-release wget software-properties-common gnupg
+          # wget -qO - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+          # echo "deb http://apt.llvm.org/$(lsb_release -sc)/ llvm-toolchain-$(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/llvm.list
+          # sudo apt-get update
+          # sudo apt-get install -y clang llvm
+          sudo -E apt -yqq install clang llvm
 
       - name: Combine Disks(合并磁盘)
         uses: easimon/maximize-build-space@master
