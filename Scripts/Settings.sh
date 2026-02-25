@@ -317,7 +317,8 @@ echo "CONFIG_PACKAGE_luci-app-caddy=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-app-turboacc=y" >> ./.config
 
 # 中文
-echo "CONFIG_PACKAGE_luci-i18n-adblock-zh-cn=y" >> ./.config
+# echo "CONFIG_PACKAGE_luci-i18n-adblock-zh-cn=y" >> ./.config
+echo "CONFIG_PACKAGE_luci-i18n-base-zh-cn=y" >> ./.config
 # 主题
 echo "CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y" >> ./.config
 # Bash
