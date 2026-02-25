@@ -84,25 +84,25 @@ CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_Generic=y
 
 # 优化架构为 Skylake（3965U）
-# CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O2 -pipe -fstack-protector-strong -fPIC -fvisibility=hidden"
+CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O2 -pipe -fstack-protector-strong -fPIC -fvisibility=hidden"
 
-# CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden -falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
+# # CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden -falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
 
-# 极限优化
-# CONFIG_TARGET_OPTIMIZATION="-Ofast -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
-CONFIG_TARGET_OPTIMIZATION="-O2 -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
--fno-semantic-interposition -fvisibility=hidden -fno-stack-protector -fno-plt \
--falign-functions=64 -falign-jumps=32 -falign-loops=32 \
--ffast-math -fno-math-errno -funsafe-math-optimizations \
--fno-trapping-math -fassociative-math -freciprocal-math \
--ffinite-math-only -fno-signed-zeros -fno-ident \
--fomit-frame-pointer -frename-registers -fstrict-aliasing \
--fprefetch-loop-arrays -fgraphite-identity -floop-nest-optimize \
--fsplit-loops -fsched-pressure -funroll-loops -fira-loop-pressure \
--funswitch-loops -fipa-pta -fdevirtualize-at-ltrans -ftracer \
--fmerge-all-constants -fno-unwind-tables -fno-asynchronous-unwind-tables \
--mavx2 -mfma -mf16c -maes -mpclmul \
--mbmi -mbmi2 -mlzcnt -mpopcnt -mabm -mrdrnd -mrdseed"
+# # 极限优化
+# # CONFIG_TARGET_OPTIMIZATION="-Ofast -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
+# CONFIG_TARGET_OPTIMIZATION="-O2 -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
+# -fno-semantic-interposition -fvisibility=hidden -fno-stack-protector -fno-plt \
+# -falign-functions=64 -falign-jumps=32 -falign-loops=32 \
+# -ffast-math -fno-math-errno -funsafe-math-optimizations \
+# -fno-trapping-math -fassociative-math -freciprocal-math \
+# -ffinite-math-only -fno-signed-zeros -fno-ident \
+# -fomit-frame-pointer -frename-registers -fstrict-aliasing \
+# -fprefetch-loop-arrays -fgraphite-identity -floop-nest-optimize \
+# -fsplit-loops -fsched-pressure -funroll-loops -fira-loop-pressure \
+# -funswitch-loops -fipa-pta -fdevirtualize-at-ltrans -ftracer \
+# -fmerge-all-constants -fno-unwind-tables -fno-asynchronous-unwind-tables \
+# -mavx2 -mfma -mf16c -maes -mpclmul \
+# -mbmi -mbmi2 -mlzcnt -mpopcnt -mabm -mrdrnd -mrdseed"
 
 # 启用 Link Time Optimization
 CONFIG_USE_LTO=y
