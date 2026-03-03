@@ -71,7 +71,7 @@ if [[ $WRT_TARGET == *"X86"* ]]; then
    	# echo "CONFIG_TARGET_OPTIMIZATION=\"-O2 -pipe -march=znver3 -mtune=znver3 -mfpmath=sse -msse4.2 -mavx2 -mfma -mprefer-vector-width=256\"" >> ./.config
 
 	这个变量决定了 根文件系统（RootFS）分区的大小 默认是256M 单位MB
-    	echo "CONFIG_TARGET_ROOTFS_PARTSIZE=5120" >> .config
+    	echo "CONFIG_TARGET_ROOTFS_PARTSIZE=2048" >> .config
 
 	# 这个变量决定了内核分区的大小，通常是 16MB 或 32MB
       	echo "CONFIG_TARGET_KERNEL_PARTSIZE=16" >> .config
@@ -84,9 +84,10 @@ CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_Generic=y
 
 # 优化架构为 Skylake（3965U）
-CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O2 -pipe -fstack-protector-strong -fPIC -fvisibility=hidden"
+# CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O2 -pipe -fstack-protector-strong -fPIC -fvisibility=hidden"
 
-# # CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden -falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
+# CONFIG_TARGET_OPTIMIZATION="-march=skylake -mtune=skylake -O3 -pipe -flto -fno-semantic-interposition -fvisibility=hidden \
+-falign-functions=32 -fgraphite-identity -floop-nest-optimize -funsafe-loop-optimizations -funroll-loops -fira-loop-pressure"
 
 # # 极限优化
 # # CONFIG_TARGET_OPTIMIZATION="-Ofast -march=skylake -mtune=skylake -flto=auto -fuse-linker-plugin -fwhole-program \
