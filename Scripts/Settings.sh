@@ -324,3 +324,5 @@ echo "CONFIG_PACKAGE_luci-i18n-base-zh-cn=y" >> ./.config
 echo "CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y" >> ./.config
 # Bash
 echo "CONFIG_PACKAGE_bash=y" >> ./.config
+# OpenCraw
+echo "CONFIG_PACKAGE_luci-app-podman=y" >> ./.config
