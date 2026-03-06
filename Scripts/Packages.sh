@@ -147,6 +147,9 @@ git_sparse_clone main https://github.com/kenzok8/small-package daed-next luci-ap
 git_sparse_clone main https://github.com/kiddin9/kwrt-packages natter2 luci-app-natter2 luci-app-cloudflarespeedtest luci-app-caddy openwrt-caddy luci-app-nginx-ha luci-app-nginx-manager luci-nginxer luci-app-nginx
 
 git clone --depth 1 --single-branch https://github.com/breeze303/openwrt-podman package/podman
+
+git clone --depth 1 https://github.com/10000ge10000/luci-app-openclaw.git
+
 ./scripts/feeds install -a
 
 wget "https://r2.lovelyy.eu.org/raw/immortalwrt/nginx/ngnx.conf" -O ../feeds/packages/net/nginx-util/files/nginx.config
